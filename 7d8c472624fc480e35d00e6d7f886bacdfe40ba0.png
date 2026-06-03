@@ -1,0 +1,1038 @@
+import svgPaths from "./svg-y6fuufmi7i";
+import imgImageWithFallback from "figma:asset/5e3699fe8f9b2eb3cfe9c34e4eb478caade05be1.png";
+import imgImageWithFallback1 from "figma:asset/9abb98b9250802ccb42c3fe9d5c5a4ff1b0ccb60.png";
+import imgImageWithFallback2 from "figma:asset/dead927b35d9b096e58cf040eb6d1633b2b546e0.png";
+
+function ImageWithFallback() {
+  return (
+    <div className="h-[611.641px] relative shrink-0 w-full" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback} />
+    </div>
+  );
+}
+
+function Container4() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[458.75px] items-start left-0 pt-[-76.469px] top-0 w-[611.656px]" data-name="Container">
+      <ImageWithFallback />
+    </div>
+  );
+}
+
+function Icon() {
+  return (
+    <div className="h-[12.656px] relative shrink-0 w-[13.328px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 12.6562">
+        <g clipPath="url(#clip0_2_482)" id="Icon">
+          <path d={svgPaths.pb607200} fill="var(--fill-0, #6C5000)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_2_482">
+            <rect fill="white" height="12.6562" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container7() {
+  return (
+    <div className="flex-[1_0_0] h-[18px] min-w-px relative" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[18px] left-0 text-[#6c5000] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">4.9</p>
+    </div>
+  );
+}
+
+function Container6() {
+  return (
+    <div className="bg-[#fdc003] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[26px] relative rounded-[9999px] shrink-0 w-[60.094px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center px-[12px] py-[4px] relative size-full">
+        <Icon />
+        <Container7 />
+      </div>
+    </div>
+  );
+}
+
+function Icon1() {
+  return (
+    <div className="h-[14px] relative shrink-0 w-[12px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 14">
+        <g clipPath="url(#clip0_2_488)" id="Icon">
+          <path d={svgPaths.p40a8f00} fill="var(--fill-0, #AD2C00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_2_488">
+            <rect fill="white" height="14" width="12" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container9() {
+  return (
+    <div className="flex-[1_0_0] h-[18px] min-w-px relative" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[18px] left-0 text-[#ad2c00] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">15-20 phút</p>
+    </div>
+  );
+}
+
+function Container8() {
+  return (
+    <div className="bg-[#fff8f6] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex-[1_0_0] h-[26px] min-w-px relative rounded-[9999px]" data-name="Container">
+      <div className="flex flex-row items-center size-full">
+        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center px-[12px] py-[4px] relative size-full">
+          <Icon1 />
+          <Container9 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container5() {
+  return (
+    <div className="absolute content-stretch flex gap-[8px] h-[24px] items-start left-[16px] top-[16px] w-[173.922px]" data-name="Container">
+      <Container6 />
+      <Container8 />
+    </div>
+  );
+}
+
+function Container3() {
+  return (
+    <div className="absolute bg-white h-[458.75px] left-0 overflow-clip rounded-[24px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-0 w-[611.656px]" data-name="Container">
+      <Container4 />
+      <Container5 />
+    </div>
+  );
+}
+
+function ImageWithFallback1() {
+  return (
+    <div className="relative shrink-0 size-[193.219px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback1} />
+    </div>
+  );
+}
+
+function Container11() {
+  return (
+    <div className="absolute bg-[#fff1ed] content-stretch flex items-center justify-center left-0 overflow-clip rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[193.219px] top-0" data-name="Container">
+      <ImageWithFallback1 />
+    </div>
+  );
+}
+
+function ImageWithFallback2() {
+  return (
+    <div className="relative shrink-0 size-[193.219px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback2} />
+    </div>
+  );
+}
+
+function Container12() {
+  return (
+    <div className="absolute bg-[#fff1ed] content-stretch flex items-center justify-center left-[209.22px] overflow-clip rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[193.219px] top-0" data-name="Container">
+      <ImageWithFallback2 />
+    </div>
+  );
+}
+
+function Container15() {
+  return (
+    <div className="flex-[1_0_0] h-[24px] min-w-px relative" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[24px] left-0 text-[#ad2c00] text-[16px] top-0 whitespace-nowrap">+2 Ảnh</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon2() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M6 3L11 8L6 13" id="Vector" stroke="var(--stroke-0, #AD2C00)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Container14() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[73.922px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center relative size-full">
+        <Container15 />
+        <Icon2 />
+      </div>
+    </div>
+  );
+}
+
+function Container13() {
+  return (
+    <div className="absolute bg-[#fff1ed] content-stretch flex items-center justify-center left-[418.44px] overflow-clip pl-[59.641px] pr-[59.656px] rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[193.219px] top-0" data-name="Container">
+      <Container14 />
+    </div>
+  );
+}
+
+function Container10() {
+  return (
+    <div className="absolute h-[193.219px] left-0 top-[474.75px] w-[611.656px]" data-name="Container">
+      <Container11 />
+      <Container12 />
+      <Container13 />
+    </div>
+  );
+}
+
+function Container2() {
+  return (
+    <div className="absolute h-[667.969px] left-[32px] top-[32px] w-[611.656px]" data-name="Container">
+      <Container3 />
+      <Container10 />
+    </div>
+  );
+}
+
+function Container18() {
+  return (
+    <div className="h-[32px] relative shrink-0 w-[557.344px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[32px] left-0 text-[#291712] text-[24px] top-0 whitespace-nowrap">Phở Bò ALOVUX Đặc Biệt</p>
+      </div>
+    </div>
+  );
+}
+
+function Container19() {
+  return (
+    <div className="h-[72px] relative shrink-0 w-[557.344px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#5d4038] text-[16px] top-0 w-[558px]">Phở bò truyền thống với nước dùng hầm xương nhiều giờ, thịt bò tươi ngon, bánh phở dai mềm. Phục vụ kèm rau thơm, giá đỗ, chanh và tương ớt.</p>
+      </div>
+    </div>
+  );
+}
+
+function Container20() {
+  return (
+    <div className="h-[56px] relative shrink-0 w-[557.344px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[48px] left-0 text-[#ad2c00] text-[32px] top-[8px] whitespace-nowrap">35.000đ</p>
+      </div>
+    </div>
+  );
+}
+
+function Container17() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[8px] h-[194px] items-start left-0 pb-[18px] top-0 w-[557.344px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#fddbd3] border-b border-solid inset-0 pointer-events-none" />
+      <Container18 />
+      <Container19 />
+      <Container20 />
+    </div>
+  );
+}
+
+function Container21() {
+  return (
+    <div className="absolute h-[28px] left-0 top-[218px] w-[129.094px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#291712] text-[20px] top-0 whitespace-nowrap">Chọn Kích Cỡ</p>
+    </div>
+  );
+}
+
+function Container26() {
+  return <div className="bg-[#ad2c00] relative rounded-[9999px] shrink-0 size-[10px]" data-name="Container" />;
+}
+
+function Container25() {
+  return (
+    <div className="relative rounded-[9999px] shrink-0 size-[20px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-2 border-[#ad2c00] border-solid inset-0 pointer-events-none rounded-[9999px]" />
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[5px] py-[4px] relative size-full">
+        <Container26 />
+      </div>
+    </div>
+  );
+}
+
+function Container27() {
+  return (
+    <div className="flex-[1_0_0] h-[24px] min-w-px relative" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Phở Thường</p>
+      </div>
+    </div>
+  );
+}
+
+function Container24() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[120.422px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] items-center relative size-full">
+        <Container25 />
+        <Container27 />
+      </div>
+    </div>
+  );
+}
+
+function Container28() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[44.781px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">Tô Vừa</p>
+      </div>
+    </div>
+  );
+}
+
+function Container23() {
+  return (
+    <div className="h-[56px] relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-between p-[18px] relative size-full">
+          <Container24 />
+          <Container28 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container22() {
+  return (
+    <div className="absolute bg-[#fff1ed] content-stretch flex flex-col h-[60px] items-start left-0 p-[2px] rounded-[8px] top-[262px] w-[274.672px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-2 border-[#ad2c00] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <Container23 />
+    </div>
+  );
+}
+
+function Container32() {
+  return (
+    <div className="h-[20px] relative rounded-[9999px] shrink-0 w-[19.094px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-2 border-[#926f66] border-solid inset-0 pointer-events-none rounded-[9999px]" />
+    </div>
+  );
+}
+
+function Container33() {
+  return (
+    <div className="flex-[1_0_0] h-[48px] min-w-px relative" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[24px] left-0 text-[#291712] text-[16px] top-0 w-[94px]">Phở Đặc Biệt</p>
+      </div>
+    </div>
+  );
+}
+
+function Container31() {
+  return (
+    <div className="h-[48px] relative shrink-0 w-[120.344px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] items-center relative size-full">
+        <Container32 />
+        <Container33 />
+      </div>
+    </div>
+  );
+}
+
+function Container34() {
+  return (
+    <div className="h-[42px] relative shrink-0 w-[114.328px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 w-[115px]">+20.000đ (Tô Lớn)</p>
+      </div>
+    </div>
+  );
+}
+
+function Container30() {
+  return (
+    <div className="h-[56px] relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-between p-[18px] relative size-full">
+          <Container31 />
+          <Container34 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container29() {
+  return (
+    <div className="absolute bg-white content-stretch flex flex-col h-[60px] items-start left-[282.67px] p-[2px] rounded-[8px] top-[262px] w-[274.672px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-2 border-[#fddbd3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <Container30 />
+    </div>
+  );
+}
+
+function Container36() {
+  return (
+    <div className="h-[28px] relative shrink-0 w-[135.328px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#291712] text-[20px] top-0 whitespace-nowrap">Thêm Topping</p>
+      </div>
+    </div>
+  );
+}
+
+function Container37() {
+  return (
+    <div className="bg-[#ffe9e4] h-[26px] relative rounded-[4px] shrink-0 w-[72.234px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[4px] px-[8px] relative size-full">
+        <p className="font-['Work_Sans:Medium',sans-serif] font-medium leading-[18px] relative shrink-0 text-[#5d4038] text-[12px] tracking-[0.24px] whitespace-nowrap">Tuỳ Chọn</p>
+      </div>
+    </div>
+  );
+}
+
+function Container35() {
+  return (
+    <div className="absolute content-stretch flex h-[28px] items-end justify-between left-0 top-[346px] w-[557.344px]" data-name="Container">
+      <Container36 />
+      <Container37 />
+    </div>
+  );
+}
+
+function Container40() {
+  return <div className="absolute bg-white border-2 border-[#926f66] border-solid left-0 rounded-[4px] size-[20px] top-[2px]" data-name="Container" />;
+}
+
+function Container41() {
+  return (
+    <div className="absolute h-[24px] left-[36px] top-0 w-[78.453px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Thêm Phở</p>
+    </div>
+  );
+}
+
+function Container39() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[114.453px]" data-name="Container">
+      <Container40 />
+      <Container41 />
+    </div>
+  );
+}
+
+function Container42() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[54.953px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">+5.000đ</p>
+    </div>
+  );
+}
+
+function Container38() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 p-[8px] rounded-[8px] top-[390px] w-[557.344px]" data-name="Container">
+      <Container39 />
+      <Container42 />
+    </div>
+  );
+}
+
+function Container45() {
+  return <div className="absolute bg-white border-2 border-[#926f66] border-solid left-0 rounded-[4px] size-[20px] top-[2px]" data-name="Container" />;
+}
+
+function Container46() {
+  return (
+    <div className="absolute h-[24px] left-[36px] top-0 w-[104.469px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Thêm Thịt Bò</p>
+    </div>
+  );
+}
+
+function Container44() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[140.469px]" data-name="Container">
+      <Container45 />
+      <Container46 />
+    </div>
+  );
+}
+
+function Container47() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[60.5px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">+10.000đ</p>
+    </div>
+  );
+}
+
+function Container43() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 p-[8px] rounded-[8px] top-[438px] w-[557.344px]" data-name="Container">
+      <Container44 />
+      <Container47 />
+    </div>
+  );
+}
+
+function Container50() {
+  return <div className="absolute bg-white border-2 border-[#926f66] border-solid left-0 rounded-[4px] size-[20px] top-[2px]" data-name="Container" />;
+}
+
+function Container51() {
+  return (
+    <div className="absolute h-[24px] left-[36px] top-0 w-[87.875px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Thêm Quẩy</p>
+    </div>
+  );
+}
+
+function Container49() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[123.875px]" data-name="Container">
+      <Container50 />
+      <Container51 />
+    </div>
+  );
+}
+
+function Container52() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[55.422px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">+8.000đ</p>
+    </div>
+  );
+}
+
+function Container48() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 p-[8px] rounded-[8px] top-[486px] w-[557.344px]" data-name="Container">
+      <Container49 />
+      <Container52 />
+    </div>
+  );
+}
+
+function Container55() {
+  return <div className="absolute bg-white border-2 border-[#926f66] border-solid left-0 rounded-[4px] size-[20px] top-[2px]" data-name="Container" />;
+}
+
+function Container56() {
+  return (
+    <div className="absolute h-[24px] left-[36px] top-0 w-[107.906px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Thêm Bò Viên</p>
+    </div>
+  );
+}
+
+function Container54() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[143.906px]" data-name="Container">
+      <Container55 />
+      <Container56 />
+    </div>
+  );
+}
+
+function Container57() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[60.5px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">+10.000đ</p>
+    </div>
+  );
+}
+
+function Container53() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 p-[8px] rounded-[8px] top-[534px] w-[557.344px]" data-name="Container">
+      <Container54 />
+      <Container57 />
+    </div>
+  );
+}
+
+function Container60() {
+  return <div className="absolute bg-white border-2 border-[#926f66] border-solid left-0 rounded-[4px] size-[20px] top-[2px]" data-name="Container" />;
+}
+
+function Container61() {
+  return (
+    <div className="absolute h-[24px] left-[36px] top-0 w-[127.875px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Thêm Rau Thơm</p>
+    </div>
+  );
+}
+
+function Container59() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[163.875px]" data-name="Container">
+      <Container60 />
+      <Container61 />
+    </div>
+  );
+}
+
+function Container62() {
+  return (
+    <div className="h-[21px] relative shrink-0 w-[54.953px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[21px] left-0 text-[#5d4038] text-[14px] top-0 whitespace-nowrap">+5.000đ</p>
+    </div>
+  );
+}
+
+function Container58() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 p-[8px] rounded-[8px] top-[582px] w-[557.344px]" data-name="Container">
+      <Container59 />
+      <Container62 />
+    </div>
+  );
+}
+
+function Container65() {
+  return (
+    <div className="h-[30px] relative shrink-0 w-[90.922px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[30px] left-0 text-[#291712] text-[20px] top-0 whitespace-nowrap">Số Lượng</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon3() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M3 8H13" id="Vector" stroke="var(--stroke-0, #291712)" strokeLinecap="round" strokeWidth="2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button() {
+  return (
+    <div className="bg-white relative rounded-[8px] shrink-0 size-[40px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border-2 border-[#fddbd3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[12px] py-[2px] relative size-full">
+        <Icon3 />
+      </div>
+    </div>
+  );
+}
+
+function Container67() {
+  return (
+    <div className="h-[30px] relative shrink-0 w-[40px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="-translate-x-1/2 absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[30px] left-[20.33px] text-[#291712] text-[20px] text-center top-[-1px] whitespace-nowrap">1</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon4() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M8 3V13M3 8H13" id="Vector" stroke="var(--stroke-0, #291712)" strokeLinecap="round" strokeWidth="2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button1() {
+  return (
+    <div className="bg-white flex-[1_0_0] h-[40px] min-w-px relative rounded-[8px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border-2 border-[#fddbd3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div className="flex flex-row items-center justify-center size-full">
+        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[12px] py-[2px] relative size-full">
+          <Icon4 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container66() {
+  return (
+    <div className="h-[40px] relative shrink-0 w-[152px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[16px] items-center relative size-full">
+        <Button />
+        <Container67 />
+        <Button1 />
+      </div>
+    </div>
+  );
+}
+
+function Container64() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 top-[8px] w-[557.344px]" data-name="Container">
+      <Container65 />
+      <Container66 />
+    </div>
+  );
+}
+
+function Container68() {
+  return (
+    <div className="h-[27px] relative shrink-0 w-[118.516px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="-translate-x-1/2 absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[27px] left-[59.5px] text-[18px] text-center text-white top-0 whitespace-nowrap">Thêm Vào Giỏ</p>
+      </div>
+    </div>
+  );
+}
+
+function Container69() {
+  return (
+    <div className="h-[27px] relative shrink-0 w-[79.219px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="-translate-x-1/2 absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[27px] left-[40px] text-[18px] text-center text-white top-0 whitespace-nowrap">35.000đ</p>
+      </div>
+    </div>
+  );
+}
+
+function Button2() {
+  return (
+    <div className="absolute bg-[#ad2c00] content-stretch drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex h-[59px] items-center justify-between left-0 px-[32px] py-[16px] rounded-[8px] top-[64px] w-[557.344px]" data-name="Button">
+      <Container68 />
+      <Container69 />
+    </div>
+  );
+}
+
+function Container63() {
+  return (
+    <div className="absolute h-[123px] left-0 top-[646px] w-[557.344px]" data-name="Container">
+      <Container64 />
+      <Button2 />
+    </div>
+  );
+}
+
+function Container16() {
+  return (
+    <div className="absolute h-[769px] left-[675.66px] top-[32px] w-[557.344px]" data-name="Container">
+      <Container17 />
+      <Container21 />
+      <Container22 />
+      <Container29 />
+      <Container35 />
+      <Container38 />
+      <Container43 />
+      <Container48 />
+      <Container53 />
+      <Container58 />
+      <Container63 />
+    </div>
+  );
+}
+
+function Container1() {
+  return (
+    <div className="h-[833px] relative shrink-0 w-full" data-name="Container">
+      <Container2 />
+      <Container16 />
+    </div>
+  );
+}
+
+function Container() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[833px] items-start left-[113px] overflow-clip pr-[15px] top-[72px] w-[1280px]" data-name="Container">
+      <Container1 />
+    </div>
+  );
+}
+
+function Container71() {
+  return (
+    <div className="absolute h-[28px] left-[20px] top-[24px] w-[83.391px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[28px] left-0 text-[#ad2c00] text-[20px] top-0 whitespace-nowrap">ALOVUX</p>
+    </div>
+  );
+}
+
+function Container72() {
+  return (
+    <div className="absolute h-[16px] left-[420.77px] top-[30px] w-[292.828px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">© 2024 ALOVUX Giao Đồ Ăn. Bảo lưu mọi quyền.</p>
+    </div>
+  );
+}
+
+function Container74() {
+  return (
+    <div className="absolute h-[16px] left-0 top-0 w-[122.469px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Chính Sách Bảo Mật</p>
+    </div>
+  );
+}
+
+function Container73() {
+  return (
+    <div className="absolute h-[16px] left-[1030.95px] opacity-80 top-[30px] w-[122.469px]" data-name="Container">
+      <Container74 />
+    </div>
+  );
+}
+
+function Container75() {
+  return (
+    <div className="absolute h-[16px] left-[1169.42px] opacity-80 top-[30px] w-[119.969px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Điều Khoản Dịch Vụ</p>
+    </div>
+  );
+}
+
+function Container77() {
+  return (
+    <div className="absolute h-[16px] left-0 top-0 w-[118.5px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Trung Tâm Trợ Giúp</p>
+    </div>
+  );
+}
+
+function Container76() {
+  return (
+    <div className="absolute h-[16px] left-[1305.39px] opacity-80 top-[30px] w-[118.5px]" data-name="Container">
+      <Container77 />
+    </div>
+  );
+}
+
+function Container78() {
+  return (
+    <div className="absolute h-[16px] left-[1439.89px] opacity-80 top-[30px] w-[46.109px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Liên Hệ</p>
+    </div>
+  );
+}
+
+function Container70() {
+  return (
+    <div className="absolute bg-[#fddbd3] h-[76px] left-0 top-[927px] w-[1506px]" data-name="Container">
+      <Container71 />
+      <Container72 />
+      <Container73 />
+      <Container75 />
+      <Container76 />
+      <Container78 />
+    </div>
+  );
+}
+
+function Container80() {
+  return (
+    <div className="absolute h-[32px] left-[20px] top-[23px] w-[101.641px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:ExtraBold',sans-serif] font-extrabold leading-[32px] left-0 text-[#ad2c00] text-[24px] top-0 whitespace-nowrap">ALOVUX</p>
+    </div>
+  );
+}
+
+function Container81() {
+  return (
+    <div className="absolute h-[28px] left-[153.64px] top-[25px] w-[95.547px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Trang Chủ</p>
+    </div>
+  );
+}
+
+function Container84() {
+  return (
+    <div className="absolute h-[28px] left-0 top-0 w-[90.344px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#ad2c00] text-[20px] top-0 whitespace-nowrap">Thực Đơn</p>
+    </div>
+  );
+}
+
+function Container83() {
+  return (
+    <div className="h-[34px] relative shrink-0 w-full" data-name="Container">
+      <Container84 />
+    </div>
+  );
+}
+
+function Container82() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[36px] items-start left-[273.19px] pb-[2px] top-[21px] w-[90.344px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#ad2c00] border-b-2 border-solid inset-0 pointer-events-none" />
+      <Container83 />
+    </div>
+  );
+}
+
+function Container85() {
+  return (
+    <div className="absolute h-[28px] left-[387.53px] top-[25px] w-[94.172px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Đơn Hàng</p>
+    </div>
+  );
+}
+
+function Container86() {
+  return (
+    <div className="absolute h-[28px] left-[513.7px] top-[25px] w-[90.891px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Tài Khoản</p>
+    </div>
+  );
+}
+
+function TextInput() {
+  return (
+    <div className="absolute content-stretch flex h-[24px] items-center left-[41px] overflow-clip pt-[3px] top-[11px] w-[198px]" data-name="Text Input">
+      <p className="font-['Work_Sans:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[14px] text-[rgba(107,114,128,0.5)] whitespace-nowrap">Tìm món ăn...</p>
+    </div>
+  );
+}
+
+function Container90() {
+  return (
+    <div className="absolute h-[46px] left-0 overflow-clip rounded-[8px] top-0 w-[256px]" data-name="Container">
+      <TextInput />
+    </div>
+  );
+}
+
+function Container91() {
+  return <div className="absolute border border-[#e7bdb2] border-solid h-[46px] left-0 rounded-[8px] top-0 w-[256px]" data-name="Container" />;
+}
+
+function Container89() {
+  return (
+    <div className="absolute bg-white h-[46px] left-0 rounded-[8px] top-0 w-[256px]" data-name="Container">
+      <Container90 />
+      <Container91 />
+    </div>
+  );
+}
+
+function Icon5() {
+  return (
+    <div className="relative shrink-0 size-[18px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18 18">
+        <g clipPath="url(#clip0_2_479)" id="Icon">
+          <path d={svgPaths.p204054c0} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_2_479">
+            <rect fill="white" height="18" width="18" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container92() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[29.063px] items-start left-[12px] top-[8.47px] w-[18px]" data-name="Container">
+      <Icon5 />
+    </div>
+  );
+}
+
+function Container88() {
+  return (
+    <div className="absolute h-[46px] left-0 top-0 w-[256px]" data-name="Container">
+      <Container89 />
+      <Container92 />
+    </div>
+  );
+}
+
+function Icon6() {
+  return (
+    <div className="absolute h-[20px] left-[8px] top-[8px] w-[19.969px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9688 20">
+        <g clipPath="url(#clip0_2_485)" id="Icon">
+          <path d={svgPaths.p3a4efd80} fill="var(--fill-0, #AD2C00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_2_485">
+            <rect fill="white" height="20" width="19.9688" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container94() {
+  return <div className="absolute bg-[#fdc003] left-[24.02px] rounded-[9999px] size-[8px] top-[4px]" data-name="Container" />;
+}
+
+function Container93() {
+  return (
+    <div className="absolute h-[36px] left-[272px] rounded-[9999px] top-[5px] w-[35.969px]" data-name="Container">
+      <Icon6 />
+      <Container94 />
+    </div>
+  );
+}
+
+function Container87() {
+  return (
+    <div className="absolute h-[46px] left-[1178.03px] top-[16px] w-[307.969px]" data-name="Container">
+      <Container88 />
+      <Container93 />
+    </div>
+  );
+}
+
+function Container79() {
+  return (
+    <div className="absolute h-[78px] left-0 top-0 w-[1506px]" data-name="Container">
+      <Container80 />
+      <Container81 />
+      <Container82 />
+      <Container85 />
+      <Container86 />
+      <Container87 />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="absolute bg-[#fff8f6] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[78px] left-0 top-0 w-[1506px]" data-name="Header">
+      <Container79 />
+    </div>
+  );
+}
+
+function PhoOrderPage() {
+  return (
+    <div className="bg-[#fff8f6] h-[1003px] relative shrink-0 w-full" data-name="PhoOrderPage">
+      <Container />
+      <Container70 />
+      <Header />
+    </div>
+  );
+}
+
+export default function TranslateTextToVietnamese() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-start relative size-full" data-name="Translate text to Vietnamese">
+      <PhoOrderPage />
+    </div>
+  );
+}

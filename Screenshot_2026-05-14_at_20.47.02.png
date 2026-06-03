@@ -1,0 +1,1356 @@
+import svgPaths from "./svg-qndsls3usl";
+import imgImageWithFallback from "figma:asset/518a1a498ca827cb28ff536d7b8b6795d0e95654.png";
+import imgImageWithFallback1 from "figma:asset/ffa0a3171c9062a8c71c00776cca1d67fa80ca8c.png";
+import imgImageWithFallback2 from "figma:asset/6b25b6a7e19e7a3a7f75186d4a2a939d68e7d554.png";
+import imgImageWithFallback3 from "figma:asset/ef08db504a5b5164103e659c5d050dc6f1d8208c.png";
+import imgImageWithFallback4 from "figma:asset/adfd41ee886453232a800062207b8bacca43b95a.png";
+import imgImageWithFallback5 from "figma:asset/168a9a32e5e9037b694a04b25c2db208bcd8ceee.png";
+import imgImageWithFallback6 from "figma:asset/7d8c472624fc480e35d00e6d7f886bacdfe40ba0.png";
+import imgImageWithFallback7 from "figma:asset/bd6045474ad1a774475b641da8e1a66c769a1e4f.png";
+import imgImageWithFallback8 from "figma:asset/52e655092c343a28f2f8f631b7e97f7f1b90bb76.png";
+import imgImageWithFallback9 from "figma:asset/a555811d77d96d313fff6fcd8e9ef48efa4c2b38.png";
+
+function ImageWithFallback() {
+  return (
+    <div className="h-[500px] relative shrink-0 w-full" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback} />
+    </div>
+  );
+}
+
+function Container() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[500px] items-start left-0 overflow-clip top-0 w-[1240px]" data-name="Container">
+      <ImageWithFallback />
+    </div>
+  );
+}
+
+function Background() {
+  return (
+    <div className="absolute bg-[#ad2c00] h-[24px] left-0 rounded-[9999px] top-0 w-[128.875px]" data-name="Background1">
+      <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[16px] left-[8px] text-[12px] text-white top-[4px] tracking-[0.6px] uppercase whitespace-nowrap">KHUYẾN MÃI SỐC</p>
+    </div>
+  );
+}
+
+function Paragraph() {
+  return (
+    <div className="h-[56px] relative shrink-0 w-[630.922px]" data-name="Paragraph">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Plus_Jakarta_Sans:ExtraBold',sans-serif] font-extrabold leading-[56px] left-0 text-[48px] text-white top-[-1px] whitespace-nowrap">Món Ngon Việt Nam,</p>
+      </div>
+    </div>
+  );
+}
+
+function Paragraph1() {
+  return (
+    <div className="h-[56px] relative shrink-0 w-[630.922px]" data-name="Paragraph">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Plus_Jakarta_Sans:ExtraBold',sans-serif] font-extrabold leading-[56px] left-0 text-[48px] text-white top-[-1px] whitespace-nowrap">Giao Tận Nơi Nhanh Chóng.</p>
+      </div>
+    </div>
+  );
+}
+
+function Container3() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[112px] items-start justify-center left-0 top-[32px] w-[630.922px]" data-name="Container">
+      <Paragraph />
+      <Paragraph1 />
+    </div>
+  );
+}
+
+function Paragraph2() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[559.844px]" data-name="Paragraph">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-white top-0 whitespace-nowrap">Trải nghiệm hương vị đặc trưng của ẩm thực Việt Nam ngay tại nhà bạn.</p>
+      </div>
+    </div>
+  );
+}
+
+function Paragraph3() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[559.844px]" data-name="Paragraph">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-white top-0 whitespace-nowrap">Đặt ngay và nhận giảm giá 20% cho đơn hàng đầu tiên.</p>
+      </div>
+    </div>
+  );
+}
+
+function Container5() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[48px] items-start justify-center left-0 top-[8px] w-[559.844px]" data-name="Container">
+      <Paragraph2 />
+      <Paragraph3 />
+    </div>
+  );
+}
+
+function Container4() {
+  return (
+    <div className="absolute h-[72px] left-0 opacity-90 top-[152px] w-[576px]" data-name="Container1">
+      <Container5 />
+    </div>
+  );
+}
+
+function Container6() {
+  return (
+    <div className="absolute h-[24px] left-[32px] top-[16px] w-[105.484px]" data-name="Container">
+      <p className="-translate-x-1/2 absolute font-['Plus_Jakarta_Sans:Regular',sans-serif] font-normal leading-[24px] left-[53px] text-[16px] text-center text-white top-[-1px] whitespace-nowrap">Đặt Món Ngay</p>
+    </div>
+  );
+}
+
+function Icon() {
+  return (
+    <div className="absolute left-[145.48px] size-[16px] top-[20px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M6 3L11 8L6 13" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button() {
+  return (
+    <div className="absolute bg-[#ad2c00] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[56px] left-0 rounded-[8px] top-[232px] w-[193.484px]" data-name="Button">
+      <Container6 />
+      <Icon />
+    </div>
+  );
+}
+
+function Container2() {
+  return (
+    <div className="absolute h-[288px] left-[64px] top-[106px] w-[576px]" data-name="Container">
+      <Background />
+      <Container3 />
+      <Container4 />
+      <Button />
+    </div>
+  );
+}
+
+function Container1() {
+  return (
+    <div className="absolute bg-gradient-to-r from-[rgba(41,23,18,0.8)] h-[500px] left-0 to-[rgba(41,23,18,0)] top-0 w-[1240px]" data-name="Container">
+      <Container2 />
+    </div>
+  );
+}
+
+function HeroSection() {
+  return (
+    <div className="absolute bg-[rgba(255,255,255,0)] h-[500px] left-[20px] overflow-clip rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-[96px] w-[1240px]" data-name="HeroSection">
+      <Container />
+      <Container1 />
+    </div>
+  );
+}
+
+function Container8() {
+  return (
+    <div className="absolute h-[28px] left-0 top-0 w-[169.375px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#291712] text-[20px] top-0 whitespace-nowrap">Danh Mục Món Ăn</p>
+    </div>
+  );
+}
+
+function Container10() {
+  return (
+    <div className="absolute h-[24px] left-0 top-0 w-[87.516px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[24px] left-0 text-[#ad2c00] text-[16px] top-0 whitespace-nowrap">Xem Tất Cả</p>
+    </div>
+  );
+}
+
+function Icon1() {
+  return (
+    <div className="absolute h-[9px] left-[91.52px] top-[7.5px] w-[5.547px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 5.54688 9">
+        <g clipPath="url(#clip0_1_240)" id="Icon">
+          <path d={svgPaths.p33c51900} id="Vector" stroke="var(--stroke-0, #AD2C00)" strokeWidth="0.999438" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_240">
+            <rect fill="white" height="9" width="5.54688" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container9() {
+  return (
+    <div className="absolute h-[24px] left-[1142.94px] top-[4px] w-[97.063px]" data-name="Container">
+      <Container10 />
+      <Icon1 />
+    </div>
+  );
+}
+
+function Container7() {
+  return (
+    <div className="absolute h-[28px] left-0 top-[24px] w-[1240px]" data-name="Container">
+      <Container8 />
+      <Container9 />
+    </div>
+  );
+}
+
+function ImageWithFallback1() {
+  return (
+    <div className="absolute left-0 size-[100px] top-0" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback1} />
+    </div>
+  );
+}
+
+function Container12() {
+  return (
+    <div className="absolute bg-[#fddbd3] left-[20px] overflow-clip rounded-[9999px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[100px] top-0" data-name="Container">
+      <ImageWithFallback1 />
+    </div>
+  );
+}
+
+function Container13() {
+  return (
+    <div className="absolute h-[24px] left-[55.22px] top-[108px] w-[29.547px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Phở</p>
+    </div>
+  );
+}
+
+function ImageWithFallback2() {
+  return (
+    <div className="absolute left-0 size-[100px] top-0" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback2} />
+    </div>
+  );
+}
+
+function Container14() {
+  return (
+    <div className="absolute bg-[#fddbd3] left-[176px] overflow-clip rounded-[9999px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[100px] top-0" data-name="Container">
+      <ImageWithFallback2 />
+    </div>
+  );
+}
+
+function Container15() {
+  return (
+    <div className="absolute h-[24px] left-[194.47px] top-[108px] w-[63.047px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Bánh Mì</p>
+    </div>
+  );
+}
+
+function ImageWithFallback3() {
+  return (
+    <div className="absolute left-0 size-[100px] top-0" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback3} />
+    </div>
+  );
+}
+
+function Container16() {
+  return (
+    <div className="absolute bg-[#fddbd3] left-[332px] overflow-clip rounded-[9999px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[100px] top-0" data-name="Container">
+      <ImageWithFallback3 />
+    </div>
+  );
+}
+
+function Container17() {
+  return (
+    <div className="absolute h-[24px] left-[346.44px] top-[108px] w-[71.109px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Gỏi Cuốn</p>
+    </div>
+  );
+}
+
+function ImageWithFallback4() {
+  return (
+    <div className="absolute left-0 size-[100px] top-0" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback4} />
+    </div>
+  );
+}
+
+function Container18() {
+  return (
+    <div className="absolute bg-[#fddbd3] left-[488px] overflow-clip rounded-[9999px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[100px] top-0" data-name="Container">
+      <ImageWithFallback4 />
+    </div>
+  );
+}
+
+function Container19() {
+  return (
+    <div className="absolute h-[24px] left-[520.13px] top-[108px] w-[35.734px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Cơm</p>
+    </div>
+  );
+}
+
+function ImageWithFallback5() {
+  return (
+    <div className="absolute left-0 size-[100px] top-0" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback5} />
+    </div>
+  );
+}
+
+function Container20() {
+  return (
+    <div className="absolute bg-[#fddbd3] left-[644px] overflow-clip rounded-[9999px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] size-[100px] top-0" data-name="Container">
+      <ImageWithFallback5 />
+    </div>
+  );
+}
+
+function Container21() {
+  return (
+    <div className="absolute h-[24px] left-[678.94px] top-[108px] w-[30.109px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[24px] left-0 text-[#291712] text-[16px] top-0 whitespace-nowrap">Chè</p>
+    </div>
+  );
+}
+
+function Container11() {
+  return (
+    <div className="absolute h-[140px] left-0 overflow-clip top-[68px] w-[1240px]" data-name="Container">
+      <Container12 />
+      <Container13 />
+      <Container14 />
+      <Container15 />
+      <Container16 />
+      <Container17 />
+      <Container18 />
+      <Container19 />
+      <Container20 />
+      <Container21 />
+    </div>
+  );
+}
+
+function CategoriesSection() {
+  return (
+    <div className="absolute h-[208px] left-[20px] top-[620px] w-[1240px]" data-name="CategoriesSection">
+      <Container7 />
+      <Container11 />
+    </div>
+  );
+}
+
+function Container22() {
+  return (
+    <div className="absolute h-[28px] left-0 top-[24px] w-[1240px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#291712] text-[20px] top-0 whitespace-nowrap">Món Ăn Nổi Bật</p>
+    </div>
+  );
+}
+
+function ImageWithFallback6() {
+  return (
+    <div className="absolute h-[200px] left-0 top-0 w-[298px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback6} />
+    </div>
+  );
+}
+
+function Icon2() {
+  return (
+    <div className="h-[35.266px] overflow-clip relative shrink-0 w-full" data-name="Icon">
+      <div className="absolute inset-[2.85%_5.45%_8.52%_5.45%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.6295 31.2561">
+          <path d={svgPaths.p4555980} fill="var(--fill-0, white)" fillOpacity="0.9" id="Vector" />
+        </svg>
+      </div>
+      <div className="absolute inset-[29.76%_29.93%_28.62%_29.93%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.7019 14.6761">
+          <path d={svgPaths.p3b117600} fill="var(--fill-0, #291712)" id="Vector" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function Container26() {
+  return (
+    <div className="content-stretch flex flex-col h-[35.266px] items-start relative shrink-0 w-full" data-name="Container">
+      <Icon2 />
+    </div>
+  );
+}
+
+function Container25() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[31.281px] items-start left-[257.34px] pt-[-1px] px-[-1.984px] top-[8px] w-[32.656px]" data-name="Container">
+      <Container26 />
+    </div>
+  );
+}
+
+function Container24() {
+  return (
+    <div className="absolute h-[200px] left-0 overflow-clip top-0 w-[298px]" data-name="Container">
+      <ImageWithFallback6 />
+      <Container25 />
+    </div>
+  );
+}
+
+function Container29() {
+  return (
+    <div className="absolute h-[24px] left-0 top-0 w-[160.516px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#291712] text-[16px] top-[-1px] whitespace-nowrap">Phở Bò Truyền Thống</p>
+    </div>
+  );
+}
+
+function Container28() {
+  return (
+    <div className="absolute h-[24px] left-[16px] overflow-clip top-[16px] w-[160.516px]" data-name="Container">
+      <Container29 />
+    </div>
+  );
+}
+
+function Container30() {
+  return (
+    <div className="absolute h-[24px] left-[210.91px] top-[16px] w-[71.094px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#ad2c00] text-[16px] top-[-1px] whitespace-nowrap">45.000đ</p>
+    </div>
+  );
+}
+
+function Container31() {
+  return (
+    <div className="absolute h-[40px] left-[16px] overflow-clip top-[44px] w-[266px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#5d4038] text-[14px] top-0 w-[266px]">Phở bò hầm với nước dùng thơm ngon, thịt bò mềm, rau thơm tươi ngon...</p>
+    </div>
+  );
+}
+
+function Icon3() {
+  return (
+    <div className="absolute h-[12.656px] left-0 top-[1.67px] w-[13.328px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 12.6562">
+        <g clipPath="url(#clip0_1_232)" id="Icon">
+          <path d={svgPaths.pb607200} fill="var(--fill-0, #FABD00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_232">
+            <rect fill="white" height="12.6562" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container34() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[16px] items-start justify-center left-[17.33px] top-0 w-[19.297px]" data-name="Container">
+      <p className="font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[16px] relative shrink-0 text-[#785900] text-[12px] tracking-[0.24px] whitespace-nowrap">4.9</p>
+    </div>
+  );
+}
+
+function Container35() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[16px] items-start justify-center left-[40.63px] top-0 w-[31px]" data-name="Container">
+      <p className="font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] relative shrink-0 text-[#5d4038] text-[12px] tracking-[0.24px] whitespace-nowrap">(234)</p>
+    </div>
+  );
+}
+
+function Container33() {
+  return (
+    <div className="absolute h-[16px] left-0 top-[9px] w-[71.625px]" data-name="Container">
+      <Icon3 />
+      <Container34 />
+      <Container35 />
+    </div>
+  );
+}
+
+function Icon4() {
+  return (
+    <div className="absolute left-0 size-[13.328px] top-[1.33px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 13.3281">
+        <g clipPath="url(#clip0_1_237)" id="Icon">
+          <path d={svgPaths.p3b81e700} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_237">
+            <rect fill="white" height="13.3281" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container37() {
+  return (
+    <div className="absolute h-[16px] left-[17.33px] top-0 w-[68.875px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">20-30 phút</p>
+    </div>
+  );
+}
+
+function Container36() {
+  return (
+    <div className="absolute h-[16px] left-[179.8px] top-[9px] w-[86.203px]" data-name="Container">
+      <Icon4 />
+      <Container37 />
+    </div>
+  );
+}
+
+function Container32() {
+  return (
+    <div className="absolute border-[#fddbd3] border-solid border-t h-[26px] left-[16px] top-[100px] w-[266px]" data-name="Container">
+      <Container33 />
+      <Container36 />
+    </div>
+  );
+}
+
+function Container27() {
+  return (
+    <div className="absolute h-[142px] left-0 top-[200px] w-[298px]" data-name="Container">
+      <Container28 />
+      <Container30 />
+      <Container31 />
+      <Container32 />
+    </div>
+  );
+}
+
+function DishCard() {
+  return (
+    <div className="absolute bg-white h-[362px] left-0 overflow-clip rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-0 w-[298px]" data-name="DishCard">
+      <Container24 />
+      <Container27 />
+    </div>
+  );
+}
+
+function ImageWithFallback7() {
+  return (
+    <div className="absolute h-[200px] left-0 top-0 w-[298px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback7} />
+    </div>
+  );
+}
+
+function Container39() {
+  return (
+    <div className="absolute bg-[#ad2c00] h-[23px] left-[8px] rounded-[4px] top-[8px] w-[64.078px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[15px] left-[8px] text-[10px] text-white top-[4px] uppercase whitespace-nowrap">PHỔ BIẾN</p>
+    </div>
+  );
+}
+
+function Icon5() {
+  return (
+    <div className="h-[35.266px] overflow-clip relative shrink-0 w-full" data-name="Icon">
+      <div className="absolute inset-[2.85%_5.45%_8.52%_5.45%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.6295 31.2561">
+          <path d={svgPaths.p4555980} fill="var(--fill-0, white)" fillOpacity="0.9" id="Vector" />
+        </svg>
+      </div>
+      <div className="absolute inset-[29.76%_29.93%_28.62%_29.93%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.7019 14.6761">
+          <path d={svgPaths.p3b117600} fill="var(--fill-0, #291712)" id="Vector" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function Container41() {
+  return (
+    <div className="content-stretch flex flex-col h-[35.266px] items-start relative shrink-0 w-full" data-name="Container">
+      <Icon5 />
+    </div>
+  );
+}
+
+function Container40() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[31.281px] items-start left-[257.34px] pt-[-1px] px-[-1.984px] top-[8px] w-[32.656px]" data-name="Container">
+      <Container41 />
+    </div>
+  );
+}
+
+function Container38() {
+  return (
+    <div className="absolute h-[200px] left-0 overflow-clip top-0 w-[298px]" data-name="Container">
+      <ImageWithFallback7 />
+      <Container39 />
+      <Container40 />
+    </div>
+  );
+}
+
+function Container44() {
+  return (
+    <div className="absolute h-[24px] left-0 top-0 w-[147.375px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#291712] text-[16px] top-[-1px] whitespace-nowrap">Bánh Mì Thịt Nướng</p>
+    </div>
+  );
+}
+
+function Container43() {
+  return (
+    <div className="absolute h-[24px] left-[16px] overflow-clip top-[16px] w-[147.375px]" data-name="Container">
+      <Container44 />
+    </div>
+  );
+}
+
+function Container45() {
+  return (
+    <div className="absolute h-[24px] left-[211.81px] top-[16px] w-[70.188px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#ad2c00] text-[16px] top-[-1px] whitespace-nowrap">25.000đ</p>
+    </div>
+  );
+}
+
+function Container46() {
+  return (
+    <div className="absolute h-[40px] left-[16px] overflow-clip top-[44px] w-[266px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#5d4038] text-[14px] top-0 w-[266px]">Bánh mì giòn tan với thịt nướng thơm lừng, rau sống và nước sốt đặc biệt...</p>
+    </div>
+  );
+}
+
+function Icon6() {
+  return (
+    <div className="absolute h-[12.656px] left-0 top-[1.67px] w-[13.328px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 12.6562">
+        <g clipPath="url(#clip0_1_232)" id="Icon">
+          <path d={svgPaths.pb607200} fill="var(--fill-0, #FABD00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_232">
+            <rect fill="white" height="12.6562" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container49() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[16px] items-start justify-center left-[17.33px] top-0 w-[19.438px]" data-name="Container">
+      <p className="font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[16px] relative shrink-0 text-[#785900] text-[12px] tracking-[0.24px] whitespace-nowrap">4.8</p>
+    </div>
+  );
+}
+
+function Container50() {
+  return (
+    <div className="absolute h-[16px] left-[40.77px] top-0 w-[28.609px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">(156)</p>
+    </div>
+  );
+}
+
+function Container48() {
+  return (
+    <div className="absolute h-[16px] left-0 top-[9px] w-[69.375px]" data-name="Container">
+      <Icon6 />
+      <Container49 />
+      <Container50 />
+    </div>
+  );
+}
+
+function Icon7() {
+  return (
+    <div className="absolute left-0 size-[13.328px] top-[1.33px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 13.3281">
+        <g clipPath="url(#clip0_1_237)" id="Icon">
+          <path d={svgPaths.p3b81e700} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_237">
+            <rect fill="white" height="13.3281" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container52() {
+  return (
+    <div className="absolute h-[16px] left-[17.33px] top-0 w-[65.828px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">15-20 phút</p>
+    </div>
+  );
+}
+
+function Container51() {
+  return (
+    <div className="absolute h-[16px] left-[182.84px] top-[9px] w-[83.156px]" data-name="Container">
+      <Icon7 />
+      <Container52 />
+    </div>
+  );
+}
+
+function Container47() {
+  return (
+    <div className="absolute border-[#fddbd3] border-solid border-t h-[26px] left-[16px] top-[100px] w-[266px]" data-name="Container">
+      <Container48 />
+      <Container51 />
+    </div>
+  );
+}
+
+function Container42() {
+  return (
+    <div className="absolute h-[142px] left-0 top-[200px] w-[298px]" data-name="Container">
+      <Container43 />
+      <Container45 />
+      <Container46 />
+      <Container47 />
+    </div>
+  );
+}
+
+function DishCard1() {
+  return (
+    <div className="absolute bg-white h-[362px] left-[314px] overflow-clip rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-0 w-[298px]" data-name="DishCard">
+      <Container38 />
+      <Container42 />
+    </div>
+  );
+}
+
+function ImageWithFallback8() {
+  return (
+    <div className="absolute h-[200px] left-0 top-0 w-[298px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback8} />
+    </div>
+  );
+}
+
+function Icon8() {
+  return (
+    <div className="h-[35.266px] overflow-clip relative shrink-0 w-full" data-name="Icon">
+      <div className="absolute inset-[2.85%_5.45%_8.52%_5.45%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.6295 31.2561">
+          <path d={svgPaths.p4555980} fill="var(--fill-0, white)" fillOpacity="0.9" id="Vector" />
+        </svg>
+      </div>
+      <div className="absolute inset-[29.76%_29.93%_28.62%_29.93%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.7019 14.6761">
+          <path d={svgPaths.p3b117600} fill="var(--fill-0, #291712)" id="Vector" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function Container55() {
+  return (
+    <div className="content-stretch flex flex-col h-[35.266px] items-start relative shrink-0 w-full" data-name="Container">
+      <Icon8 />
+    </div>
+  );
+}
+
+function Container54() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[31.281px] items-start left-[257.34px] pt-[-1px] px-[-1.984px] top-[8px] w-[32.656px]" data-name="Container">
+      <Container55 />
+    </div>
+  );
+}
+
+function Container53() {
+  return (
+    <div className="absolute h-[200px] left-0 overflow-clip top-0 w-[298px]" data-name="Container">
+      <ImageWithFallback8 />
+      <Container54 />
+    </div>
+  );
+}
+
+function Container58() {
+  return (
+    <div className="absolute h-[24px] left-0 top-0 w-[117.063px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#291712] text-[16px] top-[-1px] whitespace-nowrap">Bún Chả Hà Nội</p>
+    </div>
+  );
+}
+
+function Container57() {
+  return (
+    <div className="absolute h-[24px] left-[16px] overflow-clip top-[16px] w-[117.063px]" data-name="Container">
+      <Container58 />
+    </div>
+  );
+}
+
+function Container59() {
+  return (
+    <div className="absolute h-[24px] left-[210.05px] top-[16px] w-[71.953px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#ad2c00] text-[16px] top-[-1px] whitespace-nowrap">50.000đ</p>
+    </div>
+  );
+}
+
+function Container60() {
+  return (
+    <div className="absolute h-[60px] left-[16px] overflow-clip top-[44px] w-[266px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#5d4038] text-[14px] top-0 w-[266px]">Bún tươi với chả nướng thơm phức, thịt nướng hấp dẫn và nước chấm chua ngọt...</p>
+    </div>
+  );
+}
+
+function Icon9() {
+  return (
+    <div className="absolute h-[12.656px] left-0 top-[1.67px] w-[13.328px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 12.6562">
+        <g clipPath="url(#clip0_1_232)" id="Icon">
+          <path d={svgPaths.pb607200} fill="var(--fill-0, #FABD00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_232">
+            <rect fill="white" height="12.6562" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container63() {
+  return (
+    <div className="absolute h-[16px] left-[17.33px] top-0 w-[17.844px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[16px] left-0 text-[#785900] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">4.7</p>
+    </div>
+  );
+}
+
+function Container64() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[16px] items-start justify-center left-[39.17px] top-0 w-[29.031px]" data-name="Container">
+      <p className="font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] relative shrink-0 text-[#5d4038] text-[12px] tracking-[0.24px] whitespace-nowrap">(189)</p>
+    </div>
+  );
+}
+
+function Container62() {
+  return (
+    <div className="absolute h-[16px] left-0 top-[9px] w-[68.203px]" data-name="Container">
+      <Icon9 />
+      <Container63 />
+      <Container64 />
+    </div>
+  );
+}
+
+function Icon10() {
+  return (
+    <div className="absolute left-0 size-[13.328px] top-[1.33px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 13.3281">
+        <g clipPath="url(#clip0_1_237)" id="Icon">
+          <path d={svgPaths.p3b81e700} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_237">
+            <rect fill="white" height="13.3281" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container66() {
+  return (
+    <div className="absolute h-[16px] left-[17.33px] top-0 w-[67.766px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">25-35 phút</p>
+    </div>
+  );
+}
+
+function Container65() {
+  return (
+    <div className="absolute h-[16px] left-[180.91px] top-[9px] w-[85.094px]" data-name="Container">
+      <Icon10 />
+      <Container66 />
+    </div>
+  );
+}
+
+function Container61() {
+  return (
+    <div className="absolute border-[#fddbd3] border-solid border-t h-[26px] left-[16px] top-[120px] w-[266px]" data-name="Container">
+      <Container62 />
+      <Container65 />
+    </div>
+  );
+}
+
+function Container56() {
+  return (
+    <div className="absolute h-[162px] left-0 top-[200px] w-[298px]" data-name="Container">
+      <Container57 />
+      <Container59 />
+      <Container60 />
+      <Container61 />
+    </div>
+  );
+}
+
+function DishCard2() {
+  return (
+    <div className="absolute bg-white h-[362px] left-[628px] overflow-clip rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-0 w-[298px]" data-name="DishCard">
+      <Container53 />
+      <Container56 />
+    </div>
+  );
+}
+
+function ImageWithFallback9() {
+  return (
+    <div className="absolute h-[200px] left-0 top-0 w-[298px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageWithFallback9} />
+    </div>
+  );
+}
+
+function Icon11() {
+  return (
+    <div className="h-[35.266px] overflow-clip relative shrink-0 w-full" data-name="Icon">
+      <div className="absolute inset-[2.85%_5.45%_8.52%_5.45%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.6295 31.2561">
+          <path d={svgPaths.p4555980} fill="var(--fill-0, white)" fillOpacity="0.9" id="Vector" />
+        </svg>
+      </div>
+      <div className="absolute inset-[29.76%_29.93%_28.62%_29.93%]" data-name="Vector">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.7019 14.6761">
+          <path d={svgPaths.p3b117600} fill="var(--fill-0, #291712)" id="Vector" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function Container69() {
+  return (
+    <div className="content-stretch flex flex-col h-[35.266px] items-start relative shrink-0 w-full" data-name="Container">
+      <Icon11 />
+    </div>
+  );
+}
+
+function Container68() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[31.281px] items-start left-[257.34px] pt-[-1px] px-[-1.984px] top-[8px] w-[32.656px]" data-name="Container">
+      <Container69 />
+    </div>
+  );
+}
+
+function Container67() {
+  return (
+    <div className="absolute h-[200px] left-0 overflow-clip top-0 w-[298px]" data-name="Container">
+      <ImageWithFallback9 />
+      <Container68 />
+    </div>
+  );
+}
+
+function Container72() {
+  return (
+    <div className="absolute h-[24px] left-0 top-0 w-[139.297px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#291712] text-[16px] top-[-1px] whitespace-nowrap">Gỏi Cuốn Tôm Thịt</p>
+    </div>
+  );
+}
+
+function Container71() {
+  return (
+    <div className="absolute h-[24px] left-[16px] overflow-clip top-[16px] w-[139.297px]" data-name="Container">
+      <Container72 />
+    </div>
+  );
+}
+
+function Container73() {
+  return (
+    <div className="absolute h-[24px] left-[211.59px] top-[16px] w-[70.406px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[24px] left-0 text-[#ad2c00] text-[16px] top-[-1px] whitespace-nowrap">35.000đ</p>
+    </div>
+  );
+}
+
+function Container74() {
+  return (
+    <div className="absolute h-[40px] left-[16px] overflow-clip top-[44px] w-[266px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[#5d4038] text-[14px] top-0 w-[266px]">Gỏi cuốn tươi mát với tôm, thịt, bún, rau sống và nước chấm đậm đà...</p>
+    </div>
+  );
+}
+
+function Icon12() {
+  return (
+    <div className="absolute h-[12.656px] left-0 top-[1.67px] w-[13.328px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 12.6562">
+        <g clipPath="url(#clip0_1_232)" id="Icon">
+          <path d={svgPaths.pb607200} fill="var(--fill-0, #FABD00)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_232">
+            <rect fill="white" height="12.6562" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container77() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[16px] items-start justify-center left-[17.33px] top-0 w-[19.234px]" data-name="Container">
+      <p className="font-['Work_Sans:SemiBold',sans-serif] font-semibold leading-[16px] relative shrink-0 text-[#785900] text-[12px] tracking-[0.24px] whitespace-nowrap">4.6</p>
+    </div>
+  );
+}
+
+function Container78() {
+  return (
+    <div className="absolute h-[16px] left-[40.56px] top-0 w-[28.844px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">(142)</p>
+    </div>
+  );
+}
+
+function Container76() {
+  return (
+    <div className="absolute h-[16px] left-0 top-[9px] w-[69.406px]" data-name="Container">
+      <Icon12 />
+      <Container77 />
+      <Container78 />
+    </div>
+  );
+}
+
+function Icon13() {
+  return (
+    <div className="absolute left-0 size-[13.328px] top-[1.33px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.3281 13.3281">
+        <g clipPath="url(#clip0_1_237)" id="Icon">
+          <path d={svgPaths.p3b81e700} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_237">
+            <rect fill="white" height="13.3281" width="13.3281" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container80() {
+  return (
+    <div className="absolute h-[16px] left-[17.33px] top-0 w-[65.281px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">15-25 phút</p>
+    </div>
+  );
+}
+
+function Container79() {
+  return (
+    <div className="absolute h-[16px] left-[183.39px] top-[9px] w-[82.609px]" data-name="Container">
+      <Icon13 />
+      <Container80 />
+    </div>
+  );
+}
+
+function Container75() {
+  return (
+    <div className="absolute border-[#fddbd3] border-solid border-t h-[26px] left-[16px] top-[100px] w-[266px]" data-name="Container">
+      <Container76 />
+      <Container79 />
+    </div>
+  );
+}
+
+function Container70() {
+  return (
+    <div className="absolute h-[142px] left-0 top-[200px] w-[298px]" data-name="Container">
+      <Container71 />
+      <Container73 />
+      <Container74 />
+      <Container75 />
+    </div>
+  );
+}
+
+function DishCard3() {
+  return (
+    <div className="absolute bg-white h-[362px] left-[942px] overflow-clip rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] top-0 w-[298px]" data-name="DishCard">
+      <Container67 />
+      <Container70 />
+    </div>
+  );
+}
+
+function Container23() {
+  return (
+    <div className="absolute h-[362px] left-0 top-[68px] w-[1240px]" data-name="Container">
+      <DishCard />
+      <DishCard1 />
+      <DishCard2 />
+      <DishCard3 />
+    </div>
+  );
+}
+
+function FeaturedDishesSection() {
+  return (
+    <div className="absolute h-[430px] left-[20px] top-[852px] w-[1240px]" data-name="FeaturedDishesSection">
+      <Container22 />
+      <Container23 />
+    </div>
+  );
+}
+
+function MainContent() {
+  return (
+    <div className="absolute h-[1312px] left-[105.5px] top-0 w-[1280px]" data-name="Main Content">
+      <HeroSection />
+      <CategoriesSection />
+      <FeaturedDishesSection />
+    </div>
+  );
+}
+
+function Container81() {
+  return (
+    <div className="absolute h-[28px] left-[20px] top-[24px] w-[109.422px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:Bold',sans-serif] font-bold leading-[28px] left-0 text-[#ad2c00] text-[20px] top-0 tracking-[0.24px] whitespace-nowrap">ALOVUX</p>
+    </div>
+  );
+}
+
+function Container83() {
+  return (
+    <div className="absolute h-[16px] left-0 top-0 w-[122.469px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Chính Sách Bảo Mật</p>
+    </div>
+  );
+}
+
+function Container82() {
+  return (
+    <div className="absolute h-[16px] left-[405.63px] opacity-80 top-[30px] w-[122.469px]" data-name="Container">
+      <Container83 />
+    </div>
+  );
+}
+
+function Container84() {
+  return (
+    <div className="absolute h-[16px] left-[552.09px] opacity-80 top-[30px] w-[119.969px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Điều Khoản Dịch Vụ</p>
+    </div>
+  );
+}
+
+function Container86() {
+  return (
+    <div className="absolute h-[16px] left-0 top-0 w-[118.5px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Trung Tâm Trợ Giúp</p>
+    </div>
+  );
+}
+
+function Container85() {
+  return (
+    <div className="absolute h-[16px] left-[696.06px] opacity-80 top-[30px] w-[118.5px]" data-name="Container">
+      <Container86 />
+    </div>
+  );
+}
+
+function Container87() {
+  return (
+    <div className="absolute h-[16px] left-[838.56px] opacity-80 top-[30px] w-[46.109px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">Liên Hệ</p>
+    </div>
+  );
+}
+
+function Container88() {
+  return (
+    <div className="absolute h-[16px] left-[1160.86px] opacity-80 top-[30px] w-[310.141px]" data-name="Container">
+      <p className="absolute font-['Work_Sans:Medium',sans-serif] font-medium leading-[16px] left-0 text-[#5d4038] text-[12px] top-0 tracking-[0.24px] whitespace-nowrap">© 2024 VIỆT FOOD Giao Đồ Ăn. Bảo lưu mọi quyền.</p>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="absolute bg-[#fddbd3] h-[76px] left-0 top-[1312px] w-[1491px]" data-name="Footer">
+      <Container81 />
+      <Container82 />
+      <Container84 />
+      <Container85 />
+      <Container87 />
+      <Container88 />
+    </div>
+  );
+}
+
+function Container91() {
+  return (
+    <div className="absolute h-[32px] left-[20px] top-[18px] w-[129.422px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:ExtraBold',sans-serif] font-extrabold leading-[32px] left-0 text-[#ad2c00] text-[24px] top-0 whitespace-nowrap">ALOVUX</p>
+    </div>
+  );
+}
+
+function Container92() {
+  return <div className="absolute border-[#ad2c00] border-b-2 border-solid h-[34px] left-[441.25px] top-[17px] w-[95.547px]" data-name="Container" />;
+}
+
+function Container93() {
+  return (
+    <div className="absolute h-[28px] left-[441.25px] top-[17px] w-[95.547px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#ad2c00] text-[20px] top-0 whitespace-nowrap">Trang Chủ</p>
+    </div>
+  );
+}
+
+function Container94() {
+  return (
+    <div className="absolute h-[28px] left-[568.8px] top-[20px] w-[90.344px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Thực Đơn</p>
+    </div>
+  );
+}
+
+function Container95() {
+  return (
+    <div className="absolute h-[28px] left-[699.14px] top-[20px] w-[94.172px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Đơn Hàng</p>
+    </div>
+  );
+}
+
+function Container96() {
+  return (
+    <div className="absolute h-[28px] left-[833.31px] top-[20px] w-[90.891px]" data-name="Container">
+      <p className="absolute font-['Plus_Jakarta_Sans:SemiBold',sans-serif] font-semibold leading-[28px] left-0 text-[#5d4038] text-[20px] top-0 whitespace-nowrap">Tài Khoản</p>
+    </div>
+  );
+}
+
+function Icon14() {
+  return (
+    <div className="h-[20px] relative shrink-0 w-[19.969px]" data-name="Icon">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9688 20">
+        <g clipPath="url(#clip0_1_229)" id="Icon">
+          <path d={svgPaths.p3a4efd80} fill="var(--fill-0, #5D4038)" id="Vector" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_229">
+            <rect fill="white" height="20" width="19.9688" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container97() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[36px] items-center justify-center left-[1224.03px] p-[8px] rounded-[8px] top-[16px] w-[35.969px]" data-name="Container">
+      <Icon14 />
+    </div>
+  );
+}
+
+function Container90() {
+  return (
+    <div className="absolute h-[68px] left-0 top-0 w-[1280px]" data-name="Container">
+      <Container91 />
+      <Container92 />
+      <Container93 />
+      <Container94 />
+      <Container95 />
+      <Container96 />
+      <Container97 />
+    </div>
+  );
+}
+
+function Container89() {
+  return (
+    <div className="absolute h-[68px] left-[105.5px] top-0 w-[1280px]" data-name="Container">
+      <Container90 />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="absolute bg-[#fff8f6] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[68px] left-0 top-0 w-[1491px]" data-name="Header">
+      <Container89 />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="bg-[#fff8f6] h-[1388px] relative shrink-0 w-full" data-name="App">
+      <MainContent />
+      <Footer />
+      <Header />
+    </div>
+  );
+}
+
+function Body() {
+  return (
+    <div className="content-stretch flex flex-col h-[909px] items-start relative shrink-0 w-[1491px]" data-name="Body">
+      <App />
+    </div>
+  );
+}
+
+export default function TrangCh() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-start relative size-full" data-name="Trang chủ">
+      <Body />
+    </div>
+  );
+}

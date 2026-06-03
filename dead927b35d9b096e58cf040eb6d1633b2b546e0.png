@@ -1,0 +1,59 @@
+import { createBrowserRouter } from "react-router";
+import RootLayout from "./layouts/RootLayout";
+import HomePage from "./pages/HomePage";
+import MenuPage from "./pages/MenuPage";
+import DishDetailPage from "./pages/DishDetailPage";
+import OrdersPage from "./pages/OrdersPage";
+import AccountPage from "./pages/AccountPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage";
+import AboutPage from "./pages/AboutPage";
+import PromotionsPage from "./pages/PromotionsPage";
+import HelpPage from "./pages/HelpPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import LoginPage from "./pages/LoginPage";
+import TermsPage from "./pages/TermsPage";
+import AssetsPage from "./pages/AssetsPage";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: RootLayout,
+    children: [
+      { index: true, Component: HomePage },
+      { path: "menu", Component: MenuPage },
+      { path: "dish/:id", Component: DishDetailPage },
+      { path: "cart", Component: CartPage },
+      { path: "checkout", Component: CheckoutPage },
+      { path: "order-confirmation", Component: OrderConfirmationPage },
+      { path: "orders", Component: OrdersPage },
+      { path: "account", Component: AccountPage },
+      { path: "about", Component: AboutPage },
+      { path: "promotions", Component: PromotionsPage },
+      { path: "help", Component: HelpPage },
+      { path: "reviews", Component: ReviewsPage },
+      { path: "login", Component: LoginPage },
+      { path: "terms", Component: TermsPage },
+      { path: "assets", Component: AssetsPage },
+      { path: "*", Component: NotFound },
+    ],
+  },
+]);
+
+function NotFound() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-[#fff8f6]">
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-[#ad2c00] mb-4">404</h1>
+        <p className="text-xl text-[#291712] mb-6">Trang không tìm thấy</p>
+        <a
+          href="/"
+          className="inline-block bg-[#ad2c00] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#8a2300] transition-colors"
+        >
+          Về Trang Chủ
+        </a>
+      </div>
+    </div>
+  );
+}

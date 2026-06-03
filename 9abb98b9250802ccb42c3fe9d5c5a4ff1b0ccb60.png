@@ -1,0 +1,783 @@
+import { useState } from "react";
+import { toast } from "sonner";
+import {
+  // Arrows & Directions
+  ArrowLeft, ArrowRight, ArrowUp, ArrowDown,
+  ArrowUpRight, ArrowDownLeft, ChevronLeft, ChevronRight,
+  ChevronUp, ChevronDown, ChevronsLeft, ChevronsRight,
+  CornerUpLeft, CornerDownRight, MoveRight, Navigation,
+  // User Interface
+  Search, Menu, X, Plus, Minus, Check, Filter,
+  Settings, Bell, Heart, Star, Eye, EyeOff,
+  Trash2, Edit, Edit2, Copy, Share2, Download, Upload,
+  MoreHorizontal, MoreVertical, Info, AlertCircle, CheckCircle2, XCircle,
+  // Commerce / Food app
+  ShoppingCart, ShoppingBag, CreditCard, Wallet, Tag, Ticket,
+  Package, Truck, MapPin, Clock, Calendar, Phone,
+  Mail, MessageCircle, User, UserPlus, LogIn, LogOut,
+  Home, UtensilsCrossed, ChefHat, Soup, Coffee, Pizza,
+  // Social / Misc
+  Facebook, Instagram, Youtube, Twitter, Globe, Lock,
+  Sun, Moon, Image as ImageIcon, FileText, HelpCircle, Send,
+} from "lucide-react";
+
+type IconDef = { name: string; Icon: React.ComponentType<{ size?: number; className?: string }> };
+
+const iconGroups: { title: string; icons: IconDef[] }[] = [
+  {
+    title: "Arrows & Directions",
+    icons: [
+      { name: "ArrowLeft", Icon: ArrowLeft },
+      { name: "ArrowRight", Icon: ArrowRight },
+      { name: "ArrowUp", Icon: ArrowUp },
+      { name: "ArrowDown", Icon: ArrowDown },
+      { name: "ArrowUpRight", Icon: ArrowUpRight },
+      { name: "ArrowDownLeft", Icon: ArrowDownLeft },
+      { name: "ChevronLeft", Icon: ChevronLeft },
+      { name: "ChevronRight", Icon: ChevronRight },
+      { name: "ChevronUp", Icon: ChevronUp },
+      { name: "ChevronDown", Icon: ChevronDown },
+      { name: "ChevronsLeft", Icon: ChevronsLeft },
+      { name: "ChevronsRight", Icon: ChevronsRight },
+      { name: "CornerUpLeft", Icon: CornerUpLeft },
+      { name: "CornerDownRight", Icon: CornerDownRight },
+      { name: "MoveRight", Icon: MoveRight },
+      { name: "Navigation", Icon: Navigation },
+    ],
+  },
+  {
+    title: "User Interface",
+    icons: [
+      { name: "Search", Icon: Search },
+      { name: "Menu", Icon: Menu },
+      { name: "X (Close)", Icon: X },
+      { name: "Plus", Icon: Plus },
+      { name: "Minus", Icon: Minus },
+      { name: "Check", Icon: Check },
+      { name: "Filter", Icon: Filter },
+      { name: "Settings", Icon: Settings },
+      { name: "Bell", Icon: Bell },
+      { name: "Heart", Icon: Heart },
+      { name: "Star", Icon: Star },
+      { name: "Eye", Icon: Eye },
+      { name: "EyeOff", Icon: EyeOff },
+      { name: "Trash2", Icon: Trash2 },
+      { name: "Edit", Icon: Edit },
+      { name: "Edit2", Icon: Edit2 },
+      { name: "Copy", Icon: Copy },
+      { name: "Share2", Icon: Share2 },
+      { name: "Download", Icon: Download },
+      { name: "Upload", Icon: Upload },
+      { name: "MoreHorizontal", Icon: MoreHorizontal },
+      { name: "MoreVertical", Icon: MoreVertical },
+      { name: "Info", Icon: Info },
+      { name: "AlertCircle", Icon: AlertCircle },
+      { name: "CheckCircle2", Icon: CheckCircle2 },
+      { name: "XCircle", Icon: XCircle },
+    ],
+  },
+  {
+    title: "Commerce & Food",
+    icons: [
+      { name: "ShoppingCart", Icon: ShoppingCart },
+      { name: "ShoppingBag", Icon: ShoppingBag },
+      { name: "CreditCard", Icon: CreditCard },
+      { name: "Wallet", Icon: Wallet },
+      { name: "Tag", Icon: Tag },
+      { name: "Ticket", Icon: Ticket },
+      { name: "Package", Icon: Package },
+      { name: "Truck", Icon: Truck },
+      { name: "MapPin", Icon: MapPin },
+      { name: "Clock", Icon: Clock },
+      { name: "Calendar", Icon: Calendar },
+      { name: "Phone", Icon: Phone },
+      { name: "Mail", Icon: Mail },
+      { name: "MessageCircle", Icon: MessageCircle },
+      { name: "User", Icon: User },
+      { name: "UserPlus", Icon: UserPlus },
+      { name: "LogIn", Icon: LogIn },
+      { name: "LogOut", Icon: LogOut },
+      { name: "Home", Icon: Home },
+      { name: "UtensilsCrossed", Icon: UtensilsCrossed },
+      { name: "ChefHat", Icon: ChefHat },
+      { name: "Soup", Icon: Soup },
+      { name: "Coffee", Icon: Coffee },
+      { name: "Pizza", Icon: Pizza },
+    ],
+  },
+  {
+    title: "Social & Misc",
+    icons: [
+      { name: "Facebook", Icon: Facebook },
+      { name: "Instagram", Icon: Instagram },
+      { name: "Youtube", Icon: Youtube },
+      { name: "Twitter", Icon: Twitter },
+      { name: "Globe", Icon: Globe },
+      { name: "Lock", Icon: Lock },
+      { name: "Sun", Icon: Sun },
+      { name: "Moon", Icon: Moon },
+      { name: "Image", Icon: ImageIcon },
+      { name: "FileText", Icon: FileText },
+      { name: "HelpCircle", Icon: HelpCircle },
+      { name: "Send", Icon: Send },
+    ],
+  },
+];
+
+function copy(text: string) {
+  navigator.clipboard?.writeText(text);
+  toast.success(`Đã sao chép: ${text}`);
+}
+
+function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className="scroll-mt-24">
+      <h2 className="font-display font-bold text-[28px] md:text-[36px] text-[#291712] mb-6">{title}</h2>
+      {children}
+    </section>
+  );
+}
+
+function Swatch({ name, value }: { name: string; value: string }) {
+  return (
+    <button
+      onClick={() => copy(value)}
+      className="flex items-center gap-3 p-3 bg-white rounded-lg border border-[#e8d5cf] hover:border-[#ad2c00] transition-colors text-left"
+    >
+      <div
+        className="w-12 h-12 rounded-md border border-black/5 shrink-0"
+        style={{ backgroundColor: value }}
+      />
+      <div className="min-w-0">
+        <div className="font-['Inter'] font-semibold text-[14px] text-[#291712]">{name}</div>
+        <div className="font-mono text-[12px] text-[#5d4038]">{value}</div>
+      </div>
+    </button>
+  );
+}
+
+export default function AssetsPage() {
+  const [query, setQuery] = useState("");
+  const [showPwd, setShowPwd] = useState(false);
+  const [remember, setRemember] = useState(true);
+  const [gender, setGender] = useState("male");
+  const [payment, setPayment] = useState("cod");
+  const [qty, setQty] = useState(2);
+  const [filter, setFilter] = useState("all");
+  const [coupon, setCoupon] = useState("");
+
+  const filteredGroups = iconGroups
+    .map((g) => ({
+      ...g,
+      icons: g.icons.filter((i) => i.name.toLowerCase().includes(query.toLowerCase())),
+    }))
+    .filter((g) => g.icons.length > 0);
+
+  return (
+    <div className="min-h-screen bg-[#fff8f6]">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
+        {/* Header */}
+        <div className="mb-10">
+          <div className="font-['Inter'] text-[13px] uppercase tracking-wider text-[#ad2c00] mb-2">
+            Design System
+          </div>
+          <h1 className="font-display font-extrabold text-[40px] md:text-[56px] text-[#291712] leading-tight mb-3">
+            Bộ tài nguyên ALOVUX
+          </h1>
+          <p className="font-['Inter'] text-[16px] text-[#5d4038] max-w-2xl">
+            Tổng hợp toàn bộ logo, biểu tượng (icons), nút bấm (buttons) và bảng màu được sử dụng
+            xuyên suốt website. Nhấn vào bất kỳ phần tử nào để sao chép tên/mã.
+          </p>
+        </div>
+
+        {/* Quick nav */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          {[
+            ["logo", "Logo"],
+            ["colors", "Màu sắc"],
+            ["typography", "Typography"],
+            ["buttons", "Buttons"],
+            ["forms", "Forms"],
+            ["icons", "Icons"],
+          ].map(([id, label]) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className="font-['Inter'] font-medium text-[14px] px-4 py-2 rounded-full bg-white border border-[#e8d5cf] text-[#291712] hover:border-[#ad2c00] hover:text-[#ad2c00] transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+
+        <div className="space-y-16">
+          {/* LOGO */}
+          <Section id="logo" title="Logo">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-8 flex flex-col items-center justify-center min-h-[180px]">
+                <span className="font-display font-extrabold text-[40px] text-[#ad2c00]">ALOVUX</span>
+                <span className="font-['Inter'] text-[12px] text-[#5d4038] mt-3">Primary · #ad2c00</span>
+              </div>
+              <div className="bg-[#291712] rounded-xl border border-[#291712] p-8 flex flex-col items-center justify-center min-h-[180px]">
+                <span className="font-display font-extrabold text-[40px] text-[#fff8f6]">ALOVUX</span>
+                <span className="font-['Inter'] text-[12px] text-[#e8d5cf] mt-3">On dark</span>
+              </div>
+              <div className="bg-[#ad2c00] rounded-xl p-8 flex flex-col items-center justify-center min-h-[180px]">
+                <span className="font-display font-extrabold text-[40px] text-white">ALOVUX</span>
+                <span className="font-['Inter'] text-[12px] text-white/80 mt-3">Reversed</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 flex items-center justify-center">
+                <span className="font-display font-extrabold text-[20px] text-[#ad2c00]">ALOVUX</span>
+              </div>
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 flex items-center justify-center">
+                <span className="font-display font-extrabold text-[28px] text-[#ad2c00]">ALOVUX</span>
+              </div>
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 flex items-center justify-center">
+                <span className="font-display font-extrabold text-[36px] text-[#ad2c00]">ALOVUX</span>
+              </div>
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-[#ad2c00] flex items-center justify-center">
+                  <span className="font-display font-extrabold text-[22px] text-white">A</span>
+                </div>
+              </div>
+            </div>
+          </Section>
+
+          {/* COLORS */}
+          <Section id="colors" title="Bảng màu">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              <Swatch name="Primary" value="#ad2c00" />
+              <Swatch name="Primary Dark" value="#8a2300" />
+              <Swatch name="Ink" value="#291712" />
+              <Swatch name="Sub Text" value="#5d4038" />
+              <Swatch name="Background" value="#fff8f6" />
+              <Swatch name="Surface" value="#ffffff" />
+              <Swatch name="Border" value="#e8d5cf" />
+              <Swatch name="Success" value="#16a34a" />
+              <Swatch name="Warning" value="#f59e0b" />
+              <Swatch name="Danger" value="#dc2626" />
+            </div>
+          </Section>
+
+          {/* TYPOGRAPHY */}
+          <Section id="typography" title="Typography">
+            <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 md:p-8 space-y-5">
+              <div>
+                <div className="font-['Inter'] text-[12px] uppercase tracking-wider text-[#5d4038] mb-1">
+                  Display · Merriweather
+                </div>
+                <h1 className="font-display font-extrabold text-[48px] text-[#291712] leading-tight">
+                  Muốn ăn ngon thì ALOVUX!
+                </h1>
+              </div>
+              <div>
+                <div className="font-['Inter'] text-[12px] uppercase tracking-wider text-[#5d4038] mb-1">
+                  Heading 2 · Merriweather Bold
+                </div>
+                <h2 className="font-display font-bold text-[32px] text-[#291712]">Hương vị Việt Nam</h2>
+              </div>
+              <div>
+                <div className="font-['Inter'] text-[12px] uppercase tracking-wider text-[#5d4038] mb-1">
+                  Body · Inter Regular 16
+                </div>
+                <p className="font-['Inter'] text-[16px] text-[#291712] leading-relaxed max-w-2xl">
+                  Khám phá thực đơn phong phú với 24 món ăn đặc trưng của ẩm thực Việt Nam, từ Phở
+                  truyền thống đến Chè ngọt ngào.
+                </p>
+              </div>
+              <div>
+                <div className="font-['Inter'] text-[12px] uppercase tracking-wider text-[#5d4038] mb-1">
+                  Caption · Inter Medium 13
+                </div>
+                <p className="font-['Inter'] font-medium text-[13px] text-[#5d4038]">
+                  Giao hàng nhanh trong 30 phút
+                </p>
+              </div>
+            </div>
+          </Section>
+
+          {/* BUTTONS */}
+          <Section id="buttons" title="Buttons">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Primary */}
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-4">
+                  Primary
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="font-['Inter'] font-semibold text-[15px] bg-[#ad2c00] text-white px-6 py-3 rounded-lg hover:bg-[#8a2300] transition-colors min-h-[48px]">
+                    Đặt món ngay
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[15px] bg-[#ad2c00] text-white px-6 py-3 rounded-lg min-h-[48px] inline-flex items-center gap-2">
+                    <ShoppingCart size={18} /> Thêm vào giỏ
+                  </button>
+                  <button disabled className="font-['Inter'] font-semibold text-[15px] bg-[#ad2c00]/40 text-white px-6 py-3 rounded-lg min-h-[48px] cursor-not-allowed">
+                    Disabled
+                  </button>
+                </div>
+              </div>
+
+              {/* Secondary */}
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-4">
+                  Secondary / Outline
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="font-['Inter'] font-semibold text-[15px] border-2 border-[#ad2c00] text-[#ad2c00] px-6 py-3 rounded-lg hover:bg-[#ad2c00] hover:text-white transition-colors min-h-[48px]">
+                    Xem thực đơn
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[15px] bg-white border border-[#e8d5cf] text-[#291712] px-6 py-3 rounded-lg hover:border-[#ad2c00] transition-colors min-h-[48px]">
+                    Hủy
+                  </button>
+                </div>
+              </div>
+
+              {/* Ghost / Link */}
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-4">
+                  Ghost & Link
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="font-['Inter'] font-medium text-[15px] text-[#291712] px-4 py-2 rounded-lg hover:bg-[#fff8f6] min-h-[40px]">
+                    Bỏ qua
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[15px] text-[#ad2c00] underline underline-offset-4 hover:text-[#8a2300]">
+                    Xem chi tiết
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[15px] text-[#ad2c00] inline-flex items-center gap-1 hover:gap-2 transition-all">
+                    Tiếp tục <ArrowRight size={16} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Sizes */}
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-4">
+                  Kích thước
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="font-['Inter'] font-semibold text-[13px] bg-[#ad2c00] text-white px-3 py-1.5 rounded-md">
+                    Small
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[14px] bg-[#ad2c00] text-white px-4 py-2 rounded-lg">
+                    Medium
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[15px] bg-[#ad2c00] text-white px-6 py-3 rounded-lg min-h-[48px]">
+                    Large
+                  </button>
+                  <button className="font-['Inter'] font-semibold text-[16px] bg-[#ad2c00] text-white px-8 py-4 rounded-xl min-h-[56px]">
+                    XL · CTA
+                  </button>
+                </div>
+              </div>
+
+              {/* Icon buttons & badges */}
+              <div className="bg-white rounded-xl border border-[#e8d5cf] p-6 lg:col-span-2">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-4">
+                  Icon buttons, Tags & Badges
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="w-10 h-10 rounded-full bg-[#ad2c00] text-white inline-flex items-center justify-center hover:bg-[#8a2300]">
+                    <Plus size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-white border border-[#e8d5cf] text-[#291712] inline-flex items-center justify-center hover:border-[#ad2c00]">
+                    <Minus size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-white border border-[#e8d5cf] text-[#ad2c00] inline-flex items-center justify-center hover:bg-[#fff8f6]">
+                    <Heart size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-white border border-[#e8d5cf] text-[#291712] inline-flex items-center justify-center hover:border-[#ad2c00] relative">
+                    <ShoppingCart size={18} />
+                    <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#ad2c00] text-white text-[11px] font-bold inline-flex items-center justify-center">3</span>
+                  </button>
+                  <span className="font-['Inter'] font-medium text-[12px] bg-[#ad2c00] text-white px-3 py-1 rounded-full">-20%</span>
+                  <span className="font-['Inter'] font-medium text-[12px] bg-[#fff8f6] text-[#ad2c00] border border-[#ad2c00] px-3 py-1 rounded-full">Mới</span>
+                  <span className="font-['Inter'] font-medium text-[12px] bg-green-50 text-green-700 border border-green-200 px-3 py-1 rounded-full inline-flex items-center gap-1">
+                    <CheckCircle2 size={12} /> Đã giao
+                  </span>
+                  <span className="font-['Inter'] font-medium text-[12px] bg-amber-50 text-amber-700 border border-amber-200 px-3 py-1 rounded-full inline-flex items-center gap-1">
+                    <Clock size={12} /> Đang giao
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Section>
+
+          {/* FORMS */}
+          <Section id="forms" title="Form Components">
+            <p className="font-['Inter'] text-[14px] text-[#5d4038] mb-6 -mt-3">
+              Các form components đang được sử dụng thực tế trên website (Login, Checkout, Account, Cart, Reviews).
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+              {/* Text / Email / Password — LoginPage style */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-5">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Text · Email · Password
+                </h3>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Họ và tên
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Nguyễn Văn A"
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="ban@example.com"
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Mật khẩu
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPwd ? "text" : "password"}
+                      defaultValue="••••••••"
+                      className="w-full px-4 py-3 pr-12 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPwd((v) => !v)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-[#5d4038] hover:text-[#ad2c00]"
+                    >
+                      {showPwd ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Trạng thái lỗi (CheckoutPage)
+                  </label>
+                  <input
+                    type="text"
+                    defaultValue="abc"
+                    className="w-full px-4 py-3 border-2 border-red-500 rounded-lg focus:outline-none transition-colors"
+                  />
+                  <p className="text-red-600 text-[12px] mt-1 flex items-center gap-1">
+                    <AlertCircle size={12} /> Vui lòng nhập số điện thoại hợp lệ
+                  </p>
+                </div>
+
+                <div>
+                  <label className="block text-[#5d4038] text-[14px] font-medium mb-2">
+                    Disabled
+                  </label>
+                  <input
+                    type="text"
+                    disabled
+                    defaultValue="Không thể chỉnh sửa"
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg bg-[#fff8f6] text-[#926f66] cursor-not-allowed"
+                  />
+                </div>
+              </div>
+
+              {/* Textarea + Select — CheckoutPage / AccountPage */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-5">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Textarea & Select
+                </h3>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Ghi chú đơn hàng
+                  </label>
+                  <textarea
+                    rows={3}
+                    placeholder="Ví dụ: ít cay, không hành..."
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:border-[#ad2c00] focus:outline-none resize-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Sắp xếp đánh giá (ReviewsPage)
+                  </label>
+                  <select
+                    defaultValue="newest"
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:border-[#ad2c00] focus:outline-none"
+                  >
+                    <option value="newest">Mới nhất</option>
+                    <option value="highest">Đánh giá cao nhất</option>
+                    <option value="lowest">Đánh giá thấp nhất</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-[#291712] text-[14px] font-medium mb-2">
+                    Địa chỉ giao hàng (AccountPage)
+                  </label>
+                  <textarea
+                    rows={3}
+                    defaultValue="123 Lê Lợi, Quận 1, TP. Hồ Chí Minh"
+                    className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:border-[#ad2c00] focus:outline-none resize-none"
+                  />
+                </div>
+              </div>
+
+              {/* Checkbox — LoginPage */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-4">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Checkbox (LoginPage)
+                </h3>
+
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={remember}
+                    onChange={(e) => setRemember(e.target.checked)}
+                    className="w-4 h-4 rounded border-2 border-[#926f66] text-[#ad2c00] focus:ring-[#ad2c00]"
+                  />
+                  <span className="text-[#5d4038] text-[13px]">Ghi nhớ đăng nhập</span>
+                </label>
+
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="w-4 h-4 rounded border-2 border-[#926f66] text-[#ad2c00] focus:ring-[#ad2c00]"
+                  />
+                  <span className="text-[#5d4038] text-[13px]">
+                    Tôi đồng ý với{" "}
+                    <span className="text-[#ad2c00] underline">Điều khoản sử dụng</span>
+                  </span>
+                </label>
+
+                <label className="flex items-center gap-2 cursor-pointer opacity-60">
+                  <input
+                    type="checkbox"
+                    disabled
+                    className="w-4 h-4 rounded border-2 border-[#926f66] text-[#ad2c00]"
+                  />
+                  <span className="text-[#5d4038] text-[13px]">Tùy chọn vô hiệu hoá</span>
+                </label>
+
+                <div className="border-t border-[#fddbd3] pt-4 mt-2">
+                  <p className="text-[#291712] text-[14px] font-medium mb-3">
+                    Giới tính (AccountPage)
+                  </p>
+                  <div className="flex gap-6">
+                    {[
+                      { v: "male", l: "Nam" },
+                      { v: "female", l: "Nữ" },
+                      { v: "other", l: "Khác" },
+                    ].map((o) => (
+                      <label key={o.v} className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value={o.v}
+                          checked={gender === o.v}
+                          onChange={(e) => setGender(e.target.value)}
+                          className="w-4 h-4 text-[#ad2c00] focus:ring-[#ad2c00]"
+                        />
+                        <span className="text-[#291712] text-[14px]">{o.l}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Payment radio cards — CheckoutPage */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-3">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Radio Cards (CheckoutPage)
+                </h3>
+                {[
+                  { v: "cod", l: "Tiền mặt khi nhận hàng (COD)", Icon: Wallet },
+                  { v: "card", l: "Thẻ tín dụng / Ghi nợ", Icon: CreditCard },
+                  { v: "momo", l: "Ví MoMo", Icon: Phone },
+                ].map(({ v, l, Icon }) => (
+                  <label
+                    key={v}
+                    className={`flex items-center gap-4 p-4 border-2 rounded-lg cursor-pointer transition-colors ${
+                      payment === v
+                        ? "border-[#ad2c00] bg-[#fff8f6]"
+                        : "border-[#fddbd3] hover:bg-[#fff8f6]"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="payment"
+                      value={v}
+                      checked={payment === v}
+                      onChange={(e) => setPayment(e.target.value)}
+                      className="w-5 h-5 text-[#ad2c00] focus:ring-[#ad2c00]"
+                    />
+                    <Icon size={22} className="text-[#ad2c00]" />
+                    <span className="font-['Inter'] text-[15px] text-[#291712]">{l}</span>
+                  </label>
+                ))}
+              </div>
+
+              {/* Quantity stepper — CartPage */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-5">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Quantity Stepper (CartPage)
+                </h3>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setQty((q) => Math.max(1, q - 1))}
+                    className="w-9 h-9 border-2 border-[#fddbd3] rounded-lg flex items-center justify-center hover:bg-[#fff8f6] transition-colors"
+                  >
+                    <Minus size={16} className="text-[#291712]" />
+                  </button>
+                  <span className="font-['Inter'] font-semibold text-[16px] text-[#291712] w-8 text-center">
+                    {qty}
+                  </span>
+                  <button
+                    onClick={() => setQty((q) => q + 1)}
+                    className="w-9 h-9 border-2 border-[#fddbd3] rounded-lg flex items-center justify-center hover:bg-[#fff8f6] transition-colors"
+                  >
+                    <Plus size={16} className="text-[#291712]" />
+                  </button>
+                </div>
+
+                <div className="border-t border-[#fddbd3] pt-5">
+                  <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-3">
+                    Voucher (CheckoutPage)
+                  </h3>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={coupon}
+                      onChange={(e) => setCoupon(e.target.value)}
+                      placeholder="Nhập mã giảm giá"
+                      className="flex-1 px-3 py-2 border-2 border-[#fddbd3] rounded-lg focus:border-[#ad2c00] focus:outline-none text-[14px]"
+                    />
+                    <button className="font-['Inter'] font-semibold text-[14px] bg-[#ad2c00] text-white px-4 rounded-lg hover:bg-[#8a2300] transition-colors">
+                      Áp dụng
+                    </button>
+                  </div>
+                  <div className="mt-3 bg-[#d4edda] border border-[#c3e6cb] rounded-lg p-3 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-[#155724]" />
+                      <span className="font-['Inter'] text-[13px] text-[#155724] font-medium">
+                        Đã áp dụng GIAM20 (-20%)
+                      </span>
+                    </div>
+                    <button className="text-[#155724] hover:text-[#0f3d18]">
+                      <X size={16} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Filter pills — ReviewsPage */}
+              <div className="bg-white rounded-xl border-2 border-[#fddbd3] p-6 space-y-3">
+                <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038]">
+                  Filter Pills (ReviewsPage)
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { v: "all", l: "Tất cả" },
+                    { v: "5", l: "5 sao" },
+                    { v: "4", l: "4 sao" },
+                    { v: "3", l: "3 sao" },
+                    { v: "withimg", l: "Có hình ảnh" },
+                  ].map((o) => (
+                    <button
+                      key={o.v}
+                      onClick={() => setFilter(o.v)}
+                      className={`font-['Inter'] font-medium text-[14px] px-4 py-2 rounded-lg transition-colors ${
+                        filter === o.v
+                          ? "bg-[#ad2c00] text-white"
+                          : "bg-white text-[#5d4038] border border-[#fddbd3] hover:border-[#ad2c00]"
+                      }`}
+                    >
+                      {o.l}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="border-t border-[#fddbd3] pt-4 mt-2">
+                  <h3 className="font-['Inter'] font-semibold text-[14px] uppercase tracking-wider text-[#5d4038] mb-3">
+                    Card Payment Fields
+                  </h3>
+                  <div className="grid grid-cols-1 gap-3">
+                    <input
+                      type="text"
+                      placeholder="Số thẻ (1234 5678 9012 3456)"
+                      className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                    />
+                    <div className="grid grid-cols-2 gap-3">
+                      <input
+                        type="text"
+                        placeholder="MM/YY"
+                        className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                      />
+                      <input
+                        type="text"
+                        placeholder="CVV"
+                        className="w-full px-4 py-3 border-2 border-[#fddbd3] rounded-lg focus:outline-none focus:border-[#ad2c00] transition-colors"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </Section>
+
+          {/* ICONS */}
+          <Section id="icons" title="Icons">
+            <div className="mb-6 relative max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d4038]" size={18} />
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Tìm icon theo tên..."
+                className="w-full font-['Inter'] text-[15px] bg-white border border-[#e8d5cf] rounded-lg pl-10 pr-4 py-3 min-h-[48px] focus:outline-none focus:border-[#ad2c00]"
+              />
+            </div>
+
+            <div className="space-y-10">
+              {filteredGroups.length === 0 && (
+                <p className="font-['Inter'] text-[15px] text-[#5d4038]">
+                  Không tìm thấy icon phù hợp với "{query}".
+                </p>
+              )}
+              {filteredGroups.map((group) => (
+                <div key={group.title}>
+                  <h3 className="font-['Inter'] font-semibold text-[18px] text-[#291712] mb-4">
+                    {group.title}{" "}
+                    <span className="font-normal text-[#5d4038]">({group.icons.length})</span>
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    {group.icons.map(({ name, Icon }) => (
+                      <button
+                        key={name}
+                        onClick={() => copy(name)}
+                        className="bg-white rounded-lg border border-[#e8d5cf] p-4 flex flex-col items-center justify-center gap-2 hover:border-[#ad2c00] hover:bg-[#fff8f6] transition-colors group min-h-[100px]"
+                      >
+                        <Icon size={26} className="text-[#291712] group-hover:text-[#ad2c00]" />
+                        <span className="font-['Inter'] text-[12px] text-[#5d4038] truncate w-full text-center">
+                          {name}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+      </div>
+    </div>
+  );
+}
